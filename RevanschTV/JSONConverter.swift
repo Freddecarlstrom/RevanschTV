@@ -31,15 +31,42 @@ func JSONVideos(json: [JSON]) -> [Video] {
         let id = item["snippet"]["resourceId"]["videoId"].stringValue
         let videoId = id == "" ? item["id"]["videoId"].stringValue : id
         
-        let publishedAt = item["snippet"]["publishedAt"].stringValue
+        var publishedAt = item["snippet"]["publishedAt"].stringValue
         let thumbnailUrl = item["snippet"]["thumbnails"]["medium"]["url"].stringValue
         
-        let video = Video(title: title, published: getDate(publishedAt), seasonEpisode: seasonEpisode, videoId: videoId, thumbnailUrl: thumbnailUrl)
+        let video = Video(title: title, published: publishedAt.getDate(), seasonEpisode: seasonEpisode, videoId: videoId, thumbnailUrl: thumbnailUrl)
         video.color = colorForSeason(seasonEpisode)
         videos.append(video)
     }
     return videos
 }
+
+//--------------PARSE COMMENTS--------------
+func JSONComments(json: [JSON]) -> [Comment]{
+    var comments: [Comment] = []
+    for item in json {
+        let name = item["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"].stringValue
+        let comment = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"].stringValue.stringByReplacingOccurrencesOfString("\n", withString: "")
+        let id = item["id"].stringValue
+        let nbrOfReplies = item["snippet"]["totalReplyCount"].intValue
+        var publishedAt: String = item["snippet"]["topLevelComment"]["snippet"]["publishedAt"].stringValue
+        comments.append(Comment(name: name, comment: comment, id: id, nbrOfReplies: nbrOfReplies, publishedAt: publishedAt.getDate()))
+    }
+    return comments
+}
+
+//--------------PARSE REPLIES--------------
+func JSONReplies(json: [JSON]) -> [Reply]{
+    var replies: [Reply] = []
+    for item in json {
+        let name = item["snippet"]["authorDisplayName"].stringValue
+        let comment = item["snippet"]["textDisplay"].stringValue.stringByReplacingOccurrencesOfString("\n", withString: "")
+        var publishedAt: String = item["snippet"]["publishedAt"].stringValue
+        replies.append(Reply(name: name, comment: comment, publishedAt: publishedAt.getDate()))
+    }
+    return replies
+}
+
 
 //longTitle format: "Revansch! - S00E00: Probotector (SNES)
 func chopTitle(longTitle: String) -> (String, String){
@@ -50,17 +77,6 @@ func chopTitle(longTitle: String) -> (String, String){
     let title = titleString[titleString.startIndex.advancedBy(1)..<titleString.endIndex]
     let seasonEpisode = titleArray[0]
     return (title, seasonEpisode)
-}
-
-func getDate(publishedAt: String) -> String{
-    let dateFormatter = NSDateFormatter()
-    let stringDateLong = publishedAt.substringWithRange(publishedAt.startIndex..<publishedAt.startIndex.advancedBy(19))
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-    let date = dateFormatter.dateFromString(stringDateLong)
-    dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
-    return dateFormatter.stringFromDate(date!)
-    
-
 }
 
 //For screwy titles.
@@ -74,29 +90,14 @@ func separate(longTitle: String) -> [String]{
     return titleArray
 }
 
-//--------------PARSE COMMENTS--------------
-func JSONComments(json: [JSON]) -> [Comment]{
-    var comments: [Comment] = []
-    for item in json {
-        let name = item["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"].stringValue
-        let comment = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"].stringValue.stringByReplacingOccurrencesOfString("\n", withString: "")
-        let id = item["id"].stringValue
-        let nbrOfReplies = item["snippet"]["totalReplyCount"].intValue
-        let publishedAt = item["snippet"]["topLevelComment"]["snippet"]["publishedAt"].stringValue
-        comments.append(Comment(name: name, comment: comment, id: id, nbrOfReplies: nbrOfReplies, publishedAt: getDate(publishedAt)))
+extension String {
+    mutating func getDate() -> String{
+        let dateFormatter = NSDateFormatter()
+        let stringDateLong = self.substringWithRange(self.startIndex..<self.startIndex.advancedBy(19))
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let date = dateFormatter.dateFromString(stringDateLong)
+        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+        return dateFormatter.stringFromDate(date!)
     }
-    return comments
-}
-
-//--------------PARSE REPLIES--------------
-func JSONReplies(json: [JSON]) -> [Reply]{
-    var replies: [Reply] = []
-    for item in json {
-        let name = item["snippet"]["authorDisplayName"].stringValue
-        let comment = item["snippet"]["textDisplay"].stringValue.stringByReplacingOccurrencesOfString("\n", withString: "")
-        let publishedAt = item["snippet"]["publishedAt"].stringValue
-        replies.append(Reply(name: name, comment: comment, publishedAt: getDate(publishedAt)))
-    }
-    return replies
 }
 

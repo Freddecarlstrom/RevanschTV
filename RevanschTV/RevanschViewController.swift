@@ -25,8 +25,7 @@ class RevanschViewController: UIViewController{
     
     private func startLoadingView(){
         loadingView = LoadingView.instanceFromNib()
-        loadingView?.frame = CGRect(x: 0,y: 0,width: self.view.frame.width, height: self.view.frame.height)
-        loadingView?.center = self.view.center
+        loadingView?.frame = self.view.frame
         view.addSubview(loadingView!)
     }
 
