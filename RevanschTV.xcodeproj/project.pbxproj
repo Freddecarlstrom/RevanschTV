@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D60632F21CC3A16E00BDCD7D /* RevanschTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60632F11CC3A16E00BDCD7D /* RevanschTableViewController.swift */; };
+		D60632F41CC3A2A600BDCD7D /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60632F31CC3A2A600BDCD7D /* PlaylistCell.swift */; };
+		D60632F81CC3AC2B00BDCD7D /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60632F71CC3AC2B00BDCD7D /* VideoCollectionViewCell.swift */; };
+		D60672D31CB9B0FC001F0684 /* Pods_RevanschTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60672D21CB9B0FC001F0684 /* Pods_RevanschTV.framework */; };
+		D60672D61CB9B17C001F0684 /* AlamoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60672D51CB9B17C001F0684 /* AlamoConnection.swift */; };
+		D63A9B211CB99DCA0028620B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63A9B201CB99DCA0028620B /* Alamofire.framework */; };
+		D67ACDBD1CCD46FD00535EDB /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67ACDBC1CCD46FD00535EDB /* CommentItem.swift */; };
+		D688D2B31CC3F1A40066C336 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D688D2B21CC3F1A40066C336 /* SwiftyJSON.framework */; };
+		D688D2B51CC3F59B0066C336 /* RevanschViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2B41CC3F59B0066C336 /* RevanschViewController.swift */; };
+		D688D2B71CC3F71D0066C336 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2B61CC3F71D0066C336 /* Video.swift */; };
+		D688D2B91CC3F7360066C336 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2B81CC3F7360066C336 /* Playlist.swift */; };
+		D688D2BB1CC3FA690066C336 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2BA1CC3FA690066C336 /* JSONConverter.swift */; };
+		D688D2BE1CC562F50066C336 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D688D2BD1CC562F50066C336 /* LoadingView.xib */; };
+		D688D2C01CC5644E0066C336 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2BF1CC5644E0066C336 /* LoadingView.swift */; };
+		D688D2C21CC57B770066C336 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2C11CC57B770066C336 /* EmptyModel.swift */; };
+		D688D2C41CC8285C0066C336 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2C31CC8285C0066C336 /* CommentsViewController.swift */; };
+		D6CAF3911CCAD053007B17B0 /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAF3901CCAD053007B17B0 /* CommentTableCell.swift */; };
+		D6CAF3931CCAD10D007B17B0 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAF3921CCAD10D007B17B0 /* CommentsTableViewController.swift */; };
+		D6CAF3951CCAD160007B17B0 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAF3941CCAD160007B17B0 /* Comment.swift */; };
+		D6D472391CCC341D00BEFF35 /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D472381CCC341D00BEFF35 /* Reply.swift */; };
+		D6D4723B1CCC4D7C00BEFF35 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D4723A1CCC4D7C00BEFF35 /* Color.swift */; };
+		D6DD39C41CB9993600825255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD39C31CB9993600825255 /* AppDelegate.swift */; };
+		D6DD39C91CB9993600825255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6DD39C71CB9993600825255 /* Main.storyboard */; };
+		D6DD39CE1CB9993600825255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6DD39CD1CB9993600825255 /* Assets.xcassets */; };
+		D6DD39D11CB9993600825255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6DD39CF1CB9993600825255 /* LaunchScreen.storyboard */; };
+		D6DD39DC1CB9993600825255 /* RevanschTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD39DB1CB9993600825255 /* RevanschTVTests.swift */; };
+		D6DD39E71CB9993600825255 /* RevanschTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD39E61CB9993600825255 /* RevanschTVUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6DD39D81CB9993600825255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6DD39B81CB9993600825255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6DD39BF1CB9993600825255;
+			remoteInfo = RevanschTV;
+		};
+		D6DD39E31CB9993600825255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6DD39B81CB9993600825255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6DD39BF1CB9993600825255;
+			remoteInfo = RevanschTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DDAD69D8780202921E23A46 /* Pods-RevanschTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevanschTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevanschTV/Pods-RevanschTV.debug.xcconfig"; sourceTree = "<group>"; };
+		1B6C1927DEDBA8D829C7A27E /* Pods_RevanschTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevanschTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60632F11CC3A16E00BDCD7D /* RevanschTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevanschTableViewController.swift; sourceTree = "<group>"; };
+		D60632F31CC3A2A600BDCD7D /* PlaylistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
+		D60632F71CC3AC2B00BDCD7D /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		D60672D21CB9B0FC001F0684 /* Pods_RevanschTV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_RevanschTV.framework; path = "Pods/../build/Debug-iphoneos/Pods_RevanschTV.framework"; sourceTree = "<group>"; };
+		D60672D51CB9B17C001F0684 /* AlamoConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoConnection.swift; sourceTree = "<group>"; };
+		D60672D71CBA3FF2001F0684 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = "../../Library/Developer/Xcode/DerivedData/RevanschTV-bpicgeceoaonyodnwfkpthshmqge/Build/Products/Debug-iphonesimulator/SWXMLHash.framework"; sourceTree = "<group>"; };
+		D63A9B201CB99DCA0028620B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D64AC38E1CB99D600043FD65 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Alamofire; path = Pods/Alamofire; sourceTree = "<group>"; };
+		D67ACDBC1CCD46FD00535EDB /* CommentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
+		D688D2B21CC3F1A40066C336 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		D688D2B41CC3F59B0066C336 /* RevanschViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevanschViewController.swift; sourceTree = "<group>"; };
+		D688D2B61CC3F71D0066C336 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D688D2B81CC3F7360066C336 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		D688D2BA1CC3FA690066C336 /* JSONConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
+		D688D2BD1CC562F50066C336 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		D688D2BF1CC5644E0066C336 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D688D2C11CC57B770066C336 /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		D688D2C31CC8285C0066C336 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		D6CAF3901CCAD053007B17B0 /* CommentTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
+		D6CAF3921CCAD10D007B17B0 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		D6CAF3941CCAD160007B17B0 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D6D472381CCC341D00BEFF35 /* Reply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reply.swift; sourceTree = "<group>"; };
+		D6D4723A1CCC4D7C00BEFF35 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D6DD39C01CB9993600825255 /* RevanschTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevanschTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DD39C31CB9993600825255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6DD39C81CB9993600825255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6DD39CD1CB9993600825255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6DD39D01CB9993600825255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D6DD39D21CB9993600825255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6DD39D71CB9993600825255 /* RevanschTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevanschTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DD39DB1CB9993600825255 /* RevanschTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevanschTVTests.swift; sourceTree = "<group>"; };
+		D6DD39DD1CB9993600825255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6DD39E21CB9993600825255 /* RevanschTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevanschTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DD39E61CB9993600825255 /* RevanschTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevanschTVUITests.swift; sourceTree = "<group>"; };
+		D6DD39E81CB9993600825255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF587A83937AD21A4A98B39F /* Pods-RevanschTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevanschTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevanschTV/Pods-RevanschTV.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6DD39BD1CB9993600825255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D688D2B31CC3F1A40066C336 /* SwiftyJSON.framework in Frameworks */,
+				D60672D31CB9B0FC001F0684 /* Pods_RevanschTV.framework in Frameworks */,
+				D63A9B211CB99DCA0028620B /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DD39D41CB9993600825255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DD39DF1CB9993600825255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BAABD487AF50122E67A10E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D688D2B21CC3F1A40066C336 /* SwiftyJSON.framework */,
+				D60672D71CBA3FF2001F0684 /* SWXMLHash.framework */,
+				D60672D21CB9B0FC001F0684 /* Pods_RevanschTV.framework */,
+				D63A9B201CB99DCA0028620B /* Alamofire.framework */,
+				D64AC38E1CB99D600043FD65 /* Alamofire */,
+				1B6C1927DEDBA8D829C7A27E /* Pods_RevanschTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B58E64D65000F9EB0FE69BD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAD69D8780202921E23A46 /* Pods-RevanschTV.debug.xcconfig */,
+				EF587A83937AD21A4A98B39F /* Pods-RevanschTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D60672D41CB9B131001F0684 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D60672D51CB9B17C001F0684 /* AlamoConnection.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		D60672DB1CBA4435001F0684 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D688D2B61CC3F71D0066C336 /* Video.swift */,
+				D688D2B81CC3F7360066C336 /* Playlist.swift */,
+				D6CAF3941CCAD160007B17B0 /* Comment.swift */,
+				D6D472381CCC341D00BEFF35 /* Reply.swift */,
+				D67ACDBC1CCD46FD00535EDB /* CommentItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D60672F41CBAD9EB001F0684 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D60632F11CC3A16E00BDCD7D /* RevanschTableViewController.swift */,
+				D688D2B41CC3F59B0066C336 /* RevanschViewController.swift */,
+				D688D2C31CC8285C0066C336 /* CommentsViewController.swift */,
+				D6CAF3921CCAD10D007B17B0 /* CommentsTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D688D2BC1CC562B50066C336 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				D688D2BD1CC562F50066C336 /* LoadingView.xib */,
+				D688D2BF1CC5644E0066C336 /* LoadingView.swift */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
+		D6D472371CCC33E300BEFF35 /* ModelViews */ = {
+			isa = PBXGroup;
+			children = (
+				D688D2BC1CC562B50066C336 /* Loading */,
+				D60632F31CC3A2A600BDCD7D /* PlaylistCell.swift */,
+				D60632F71CC3AC2B00BDCD7D /* VideoCollectionViewCell.swift */,
+				D6CAF3901CCAD053007B17B0 /* CommentTableCell.swift */,
+			);
+			name = ModelViews;
+			sourceTree = "<group>";
+		};
+		D6D4723C1CCD075800BEFF35 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D688D2C11CC57B770066C336 /* EmptyModel.swift */,
+				D6D4723A1CCC4D7C00BEFF35 /* Color.swift */,
+				D688D2BA1CC3FA690066C336 /* JSONConverter.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		D6DD39B71CB9993600825255 = {
+			isa = PBXGroup;
+			children = (
+				D6DD39C21CB9993600825255 /* RevanschTV */,
+				D6DD39DA1CB9993600825255 /* RevanschTVTests */,
+				D6DD39E51CB9993600825255 /* RevanschTVUITests */,
+				D6DD39C11CB9993600825255 /* Products */,
+				B58E64D65000F9EB0FE69BD4 /* Pods */,
+				7BAABD487AF50122E67A10E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D6DD39C11CB9993600825255 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6DD39C01CB9993600825255 /* RevanschTV.app */,
+				D6DD39D71CB9993600825255 /* RevanschTVTests.xctest */,
+				D6DD39E21CB9993600825255 /* RevanschTVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6DD39C21CB9993600825255 /* RevanschTV */ = {
+			isa = PBXGroup;
+			children = (
+				D6D4723C1CCD075800BEFF35 /* Util */,
+				D6DD39C31CB9993600825255 /* AppDelegate.swift */,
+				D60672D41CB9B131001F0684 /* API */,
+				D60672DB1CBA4435001F0684 /* Models */,
+				D6D472371CCC33E300BEFF35 /* ModelViews */,
+				D60672F41CBAD9EB001F0684 /* ViewControllers */,
+				D6DD39CD1CB9993600825255 /* Assets.xcassets */,
+				D6DD39CF1CB9993600825255 /* LaunchScreen.storyboard */,
+				D6DD39D21CB9993600825255 /* Info.plist */,
+				D6DD39C71CB9993600825255 /* Main.storyboard */,
+			);
+			path = RevanschTV;
+			sourceTree = "<group>";
+		};
+		D6DD39DA1CB9993600825255 /* RevanschTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6DD39DB1CB9993600825255 /* RevanschTVTests.swift */,
+				D6DD39DD1CB9993600825255 /* Info.plist */,
+			);
+			path = RevanschTVTests;
+			sourceTree = "<group>";
+		};
+		D6DD39E51CB9993600825255 /* RevanschTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D6DD39E61CB9993600825255 /* RevanschTVUITests.swift */,
+				D6DD39E81CB9993600825255 /* Info.plist */,
+			);
+			path = RevanschTVUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6DD39BF1CB9993600825255 /* RevanschTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6DD39EB1CB9993600825255 /* Build configuration list for PBXNativeTarget "RevanschTV" */;
+			buildPhases = (
+				DE0414A49F61C3EC734EBD0C /* Check Pods Manifest.lock */,
+				D6DD39BC1CB9993600825255 /* Sources */,
+				D6DD39BD1CB9993600825255 /* Frameworks */,
+				D6DD39BE1CB9993600825255 /* Resources */,
+				B341CAF74E29AE19836CE345 /* Embed Pods Frameworks */,
+				49903FFC82457EBFD0E69974 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RevanschTV;
+			productName = RevanschTV;
+			productReference = D6DD39C01CB9993600825255 /* RevanschTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6DD39D61CB9993600825255 /* RevanschTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6DD39EE1CB9993600825255 /* Build configuration list for PBXNativeTarget "RevanschTVTests" */;
+			buildPhases = (
+				D6DD39D31CB9993600825255 /* Sources */,
+				D6DD39D41CB9993600825255 /* Frameworks */,
+				D6DD39D51CB9993600825255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6DD39D91CB9993600825255 /* PBXTargetDependency */,
+			);
+			name = RevanschTVTests;
+			productName = RevanschTVTests;
+			productReference = D6DD39D71CB9993600825255 /* RevanschTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D6DD39E11CB9993600825255 /* RevanschTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6DD39F11CB9993600825255 /* Build configuration list for PBXNativeTarget "RevanschTVUITests" */;
+			buildPhases = (
+				D6DD39DE1CB9993600825255 /* Sources */,
+				D6DD39DF1CB9993600825255 /* Frameworks */,
+				D6DD39E01CB9993600825255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6DD39E41CB9993600825255 /* PBXTargetDependency */,
+			);
+			name = RevanschTVUITests;
+			productName = RevanschTVUITests;
+			productReference = D6DD39E21CB9993600825255 /* RevanschTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6DD39B81CB9993600825255 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Fredrik Carlström";
+				TargetAttributes = {
+					D6DD39BF1CB9993600825255 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = YPMUTMG5YW;
+					};
+					D6DD39D61CB9993600825255 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D6DD39BF1CB9993600825255;
+					};
+					D6DD39E11CB9993600825255 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D6DD39BF1CB9993600825255;
+					};
+				};
+			};
+			buildConfigurationList = D6DD39BB1CB9993600825255 /* Build configuration list for PBXProject "RevanschTV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6DD39B71CB9993600825255;
+			productRefGroup = D6DD39C11CB9993600825255 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6DD39BF1CB9993600825255 /* RevanschTV */,
+				D6DD39D61CB9993600825255 /* RevanschTVTests */,
+				D6DD39E11CB9993600825255 /* RevanschTVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6DD39BE1CB9993600825255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DD39D11CB9993600825255 /* LaunchScreen.storyboard in Resources */,
+				D688D2BE1CC562F50066C336 /* LoadingView.xib in Resources */,
+				D6DD39CE1CB9993600825255 /* Assets.xcassets in Resources */,
+				D6DD39C91CB9993600825255 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DD39D51CB9993600825255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DD39E01CB9993600825255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49903FFC82457EBFD0E69974 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevanschTV/Pods-RevanschTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B341CAF74E29AE19836CE345 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevanschTV/Pods-RevanschTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE0414A49F61C3EC734EBD0C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6DD39BC1CB9993600825255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D688D2B51CC3F59B0066C336 /* RevanschViewController.swift in Sources */,
+				D60632F21CC3A16E00BDCD7D /* RevanschTableViewController.swift in Sources */,
+				D67ACDBD1CCD46FD00535EDB /* CommentItem.swift in Sources */,
+				D6D472391CCC341D00BEFF35 /* Reply.swift in Sources */,
+				D60632F81CC3AC2B00BDCD7D /* VideoCollectionViewCell.swift in Sources */,
+				D688D2C01CC5644E0066C336 /* LoadingView.swift in Sources */,
+				D688D2BB1CC3FA690066C336 /* JSONConverter.swift in Sources */,
+				D6D4723B1CCC4D7C00BEFF35 /* Color.swift in Sources */,
+				D688D2C21CC57B770066C336 /* EmptyModel.swift in Sources */,
+				D6DD39C41CB9993600825255 /* AppDelegate.swift in Sources */,
+				D6CAF3931CCAD10D007B17B0 /* CommentsTableViewController.swift in Sources */,
+				D60672D61CB9B17C001F0684 /* AlamoConnection.swift in Sources */,
+				D688D2C41CC8285C0066C336 /* CommentsViewController.swift in Sources */,
+				D6CAF3951CCAD160007B17B0 /* Comment.swift in Sources */,
+				D60632F41CC3A2A600BDCD7D /* PlaylistCell.swift in Sources */,
+				D6CAF3911CCAD053007B17B0 /* CommentTableCell.swift in Sources */,
+				D688D2B91CC3F7360066C336 /* Playlist.swift in Sources */,
+				D688D2B71CC3F71D0066C336 /* Video.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DD39D31CB9993600825255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DD39DC1CB9993600825255 /* RevanschTVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DD39DE1CB9993600825255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DD39E71CB9993600825255 /* RevanschTVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6DD39D91CB9993600825255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6DD39BF1CB9993600825255 /* RevanschTV */;
+			targetProxy = D6DD39D81CB9993600825255 /* PBXContainerItemProxy */;
+		};
+		D6DD39E41CB9993600825255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6DD39BF1CB9993600825255 /* RevanschTV */;
+			targetProxy = D6DD39E31CB9993600825255 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D6DD39C71CB9993600825255 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6DD39C81CB9993600825255 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D6DD39CF1CB9993600825255 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6DD39D01CB9993600825255 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6DD39E91CB9993600825255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D6DD39EA1CB9993600825255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6DD39EC1CB9993600825255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DDAD69D8780202921E23A46 /* Pods-RevanschTV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = RevanschTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FreddeG.RevanschTV.lol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		D6DD39ED1CB9993600825255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF587A83937AD21A4A98B39F /* Pods-RevanschTV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = RevanschTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FreddeG.RevanschTV.lol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		D6DD39EF1CB9993600825255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RevanschTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FreddeG.RevanschTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RevanschTV.app/RevanschTV";
+			};
+			name = Debug;
+		};
+		D6DD39F01CB9993600825255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RevanschTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FreddeG.RevanschTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RevanschTV.app/RevanschTV";
+			};
+			name = Release;
+		};
+		D6DD39F21CB9993600825255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RevanschTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FreddeG.RevanschTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RevanschTV;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D6DD39F31CB9993600825255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RevanschTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FreddeG.RevanschTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RevanschTV;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6DD39BB1CB9993600825255 /* Build configuration list for PBXProject "RevanschTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DD39E91CB9993600825255 /* Debug */,
+				D6DD39EA1CB9993600825255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6DD39EB1CB9993600825255 /* Build configuration list for PBXNativeTarget "RevanschTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DD39EC1CB9993600825255 /* Debug */,
+				D6DD39ED1CB9993600825255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6DD39EE1CB9993600825255 /* Build configuration list for PBXNativeTarget "RevanschTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DD39EF1CB9993600825255 /* Debug */,
+				D6DD39F01CB9993600825255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6DD39F11CB9993600825255 /* Build configuration list for PBXNativeTarget "RevanschTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DD39F21CB9993600825255 /* Debug */,
+				D6DD39F31CB9993600825255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6DD39B81CB9993600825255 /* Project object */;
+}

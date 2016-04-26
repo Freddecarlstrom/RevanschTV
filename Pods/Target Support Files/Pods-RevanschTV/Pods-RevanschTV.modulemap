@@ -1,0 +1,6 @@
+framework module Pods_RevanschTV {
+  umbrella header "Pods-RevanschTV-umbrella.h"
+
+  export *
+  module * { export * }
+}

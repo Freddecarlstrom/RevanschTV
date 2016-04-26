@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="VideoEntity" representedClassName=".VideoEntity" syncable="YES">
+        <attribute name="datePublished" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="datePublishedString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasBeenPlayed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="seasonEpisode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoId" optional="YES" attributeType="String" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="title"/>
+                <constraint value="datePublished"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="VideoEntity" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>
