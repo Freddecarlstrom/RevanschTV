@@ -20,10 +20,9 @@ class CommentsTableViewController: UITableViewController {
     var canDownloadMoreComments: Bool = false
     
     func reloadComments(nextPageToken: String, comments: [Comment]){
-        
         self.allCommentsAndReplies.appendContentsOf(comments)
+        self.reloadDataWithAnimation(UIViewAnimationOptions.Autoreverse)
         self.canDownloadMoreComments = nextPageToken != ""
-        self.tableView.reloadData()
     }
     
     func reloadReplies(replies: [Reply], comment: Comment){

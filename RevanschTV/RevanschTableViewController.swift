@@ -89,5 +89,13 @@ extension RevanschTableViewController: UICollectionViewDelegate, UICollectionVie
     }
 }
 
+extension UITableViewController{
+    func reloadDataWithAnimation(animation: UIViewAnimationOptions){
+        UIView.transitionWithView(tableView, duration:0.35, options: animation, animations: { () -> Void in
+                self.tableView.reloadData()
+        }, completion: nil);
+    }
+}
+
 
 
