@@ -23,15 +23,15 @@ enum YoutubeRequestType{
     func URL(API_KEY: String, CHANNEL_ID: String) -> String {
         switch self {
         case Playlist:
-            return "search?part=snippet&channelId=\(CHANNEL_ID)&maxResults=50&order=date&type=playlist&fields=items(id%2Csnippet)&key=\(API_KEY)"
+            return "search?part=snippet&channelId=\(CHANNEL_ID)&maxResults=50&order=title&type=playlist&fields=items(id%2Csnippet)&"
         case Video:
-            return "playlistItems?part=snippet&maxResults=\(MaxResults)&fields=items%2CnextPageToken&key=\(API_KEY)&"
+            return "playlistItems?part=snippet&maxResults=\(MaxResults)&fields=items%2CnextPageToken&"
         case .MostRecentVideo:
-            return "search?part=snippet&channelId=\(CHANNEL_ID)&maxResults=\(MaxResults)&order=date&type=video&fields=items(id%2Csnippet)%2CnextPageToken&key=\(API_KEY)&"
+            return "search?part=snippet&channelId=\(CHANNEL_ID)&maxResults=\(MaxResults)&order=date&type=video&fields=items(id%2Csnippet)%2CnextPageToken&"
         case Comments:
-            return "commentThreads?part=snippet&maxResults=\(MaxResults+2)&order=time&textFormat=plainText&fields=items%2CnextPageToken&key=\(API_KEY)&"
+            return "commentThreads?part=snippet&maxResults=\(MaxResults+2)&order=time&textFormat=plainText&fields=items%2CnextPageToken&"
         case Replies:
-            return "comments?part=snippet&maxResults=100&textFormat=plainText&fields=items&key=\(API_KEY)&"
+            return "comments?part=snippet&maxResults=100&textFormat=plainText&fields=items&"
         }
     }
     
@@ -60,10 +60,10 @@ class AlamoConnection{
 
     init(requestType: YoutubeRequestType){
         self.requestType = requestType
-        self.URL = "\(BASE_URL)\(requestType.URL(API_KEY, CHANNEL_ID: CHANNEL_ID))\(requestType.extra)"
+        self.URL = "\(BASE_URL)\(requestType.URL(API_KEY, CHANNEL_ID: CHANNEL_ID))\(requestType.extra)&key=\(API_KEY)"
     }
     
-    func download(completionHandler: (String, Array<AnyObject>) -> Void){
+    func download(completionHandler: (String, Array<JSONItem>, Bool) -> Void){
         print("Downloading...")
         Alamofire.request(.GET, self.URL).responseJSON {
             response in
@@ -71,32 +71,12 @@ class AlamoConnection{
                 
             case .Success(let json):
                 let jsonArray = JSON(json)
-                var nextPageToken: String = ""
-                var responseArray: Array<AnyObject> = []
-                
-                switch self.requestType! {
-                case .Playlist:
-                    print("Playlists")
-                    responseArray = JSONPlaylists(jsonArray["items"].array!)
-                break
-                case .Video, .MostRecentVideo:
-                    print("Video")
-                    nextPageToken = jsonArray["nextPageToken"].stringValue
-                    responseArray = JSONVideos(jsonArray["items"].array!)
-                break
-                case .Comments:
-                    print("Comments")
-                    nextPageToken = jsonArray["nextPageToken"].stringValue
-                    responseArray = JSONComments(jsonArray["items"].array!)
-                break
-                case .Replies:
-                    print("Replies")
-                    responseArray = JSONReplies(jsonArray["items"].array!)
-                break
-                }
-                completionHandler(nextPageToken, responseArray)
+                let nextPageToken: String = jsonArray["nextPageToken"].stringValue
+                let responseArray = JSONConverter(type: self.requestType).convertJSONToItemArray(jsonArray["items"].array!)
+                completionHandler(nextPageToken, responseArray, true)
             case .Failure(let error):
-                print("Request failed with error: \(error)")
+                print(error)
+                completionHandler("",[],false)
             }
 
         }

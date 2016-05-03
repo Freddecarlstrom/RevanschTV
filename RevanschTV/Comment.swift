@@ -7,16 +7,20 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class Comment: CommentItem {
+class Comment: CommentItem, JSONItem {
     var id: String
     var nbrOfReplies: Int
     
     
-    init(name: String, comment: String, id: String, nbrOfReplies: Int, publishedAt: String){
-        self.id = id
-        self.nbrOfReplies = nbrOfReplies
-        super.init(name: name, comment: comment, publishedAt: publishedAt)
+    required init(json: JSON){
+        self.id = json["id"].stringValue
+        self.nbrOfReplies = json["snippet"]["totalReplyCount"].intValue
+        let comment: String = json["snippet"]["topLevelComment"]["snippet"]["textDisplay"].stringValue.stringByReplacingOccurrencesOfString("\n", withString: "")
+        let name: String = json["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"].stringValue
+        var publishedAt: String = json["snippet"]["topLevelComment"]["snippet"]["publishedAt"].stringValue
+        super.init(name: name, comment: comment, publishedAt: publishedAt.getDate())
     }
     
     func isEqual(item: CommentItem) -> Bool{

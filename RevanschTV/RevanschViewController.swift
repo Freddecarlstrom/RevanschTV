@@ -32,9 +32,10 @@ class RevanschViewController: UIViewController{
     private func downloadPlaylists(){
         let type: YoutubeRequestType = .Playlist
         AlamoConnection(requestType: type).download(){
-        (nextPageToken, responseArray) in
-            var playlists = responseArray as! [Playlist]
-            playlists.insert(Playlist(title: MostRecentVideoName, id: "ID"), atIndex: 0)
+        (nextPageToken, responseArray, success) in
+            var playlists = responseArray.map{$0 as! Playlist}
+            playlists.sortInPlace{$0.title > $1.title}
+            playlists.insert(Playlist(), atIndex: 0)
             self.nextPageTokens = createEmptyStringArray(playlists.count)
             self.tableVC.reloadPlaylists(playlists)
             self.fillVideos(playlists)
@@ -52,8 +53,8 @@ class RevanschViewController: UIViewController{
         let token = nextPageTokens[index]
         let type: YoutubeRequestType = playlist.title == MostRecentVideoName ? .MostRecentVideo(nextPageToken: token) : .Video(playlistID: playlist.id, nextPageToken: token)
         AlamoConnection(requestType: type).download(){
-            (nextPageToken, responseArray) in
-            let videos = responseArray as! [Video]
+            (nextPageToken, responseArray, success) in
+            let videos = responseArray.map{$0 as! Video}
             self.nextPageTokens[index] = nextPageToken
             self.tableVC.reloadVideos(videos, canDownloadMore: nextPageToken != "", index: index)
         }

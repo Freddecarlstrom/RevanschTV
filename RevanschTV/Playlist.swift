@@ -7,14 +7,20 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class Playlist {
+class Playlist: JSONItem{
     var title: String
     var id: String
     
-    init(title: String, id: String){
-        self.title = title
-        self.id = id
+    required init(json: JSON){
+        self.title = json["snippet"]["title"].stringValue
+        self.id = json["id"]["playlistId"].stringValue
+    }
+    
+    init(){
+        self.title = MostRecentVideoName
+        self.id = "0"
     }
     
     func isEqual(playlist: Playlist) -> Bool {

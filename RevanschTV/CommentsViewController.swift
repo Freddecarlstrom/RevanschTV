@@ -31,8 +31,8 @@ class CommentsViewController: UIViewController {
         loadingView?.hidden = false
         let type: YoutubeRequestType = .Comments(videoID: self.video.videoId, nextPageToken: nextPageToken)
         AlamoConnection(requestType: type).download(){
-        (nextPageToken, responseArray) in
-            let comments = responseArray as! [Comment]
+        (nextPageToken, responseArray, success) in
+            let comments = responseArray.map{$0 as! Comment}
             self.nextPageToken = nextPageToken
             self.commentsVC.reloadComments(nextPageToken, comments: comments)
             self.fillReplies(comments)
@@ -51,8 +51,8 @@ class CommentsViewController: UIViewController {
     private func downloadReplies(comment: Comment){
     let type: YoutubeRequestType = .Replies(commentID: comment.id)
         AlamoConnection(requestType: type).download(){
-        (nextPageToken, responseArray) in
-            let replies = responseArray as! [Reply]
+        (nextPageToken, responseArray, success) in
+            let replies = responseArray.map{$0 as! Reply}
             self.commentsVC.reloadReplies(replies, comment: comment)
         }
     }

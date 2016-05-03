@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class CommentItem: CustomStringConvertible{
+class CommentItem{
     var name: String
     var comment: String
     var publishedAt: String
@@ -17,10 +18,6 @@ class CommentItem: CustomStringConvertible{
         self.name = name
         self.comment = comment
         self.publishedAt = publishedAt
-    }
-    
-    var description: String{
-        return comment
     }
 }
 
@@ -45,5 +42,16 @@ extension Array {
             }
         }
         return -1
+    }
+}
+
+extension String {
+    mutating func getDate() -> String{
+        let dateFormatter = NSDateFormatter()
+        let stringDateLong = self.substringWithRange(self.startIndex..<self.startIndex.advancedBy(19))
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let date = dateFormatter.dateFromString(stringDateLong)
+        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+        return dateFormatter.stringFromDate(date!)
     }
 }

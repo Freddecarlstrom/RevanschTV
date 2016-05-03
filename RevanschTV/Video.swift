@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
-class Video: CustomStringConvertible  {
+class Video: JSONItem {
     var title: String
     var published: String
     var seasonEpisode: String
@@ -17,22 +18,41 @@ class Video: CustomStringConvertible  {
     var thumbnail: UIImage!
     var color: UIColor!
     
-    init(title: String, published: String, seasonEpisode: String, videoId: String, thumbnailUrl: String){
+    required init(json: JSON) {
+        let (title, seasonEpisode) = chopTitle(json["snippet"]["title"].stringValue)
         self.title = title
-        self.published = published
         self.seasonEpisode = seasonEpisode
-        self.videoId = videoId
-        if(thumbnailUrl != ""){
-        self.getImage(thumbnailUrl)
-        }
-    }
+        self.color = colorForSeason(seasonEpisode)
+        //For Most Recent Videos Download. JSON is different
+        let id = json["snippet"]["resourceId"]["videoId"].stringValue
+        self.videoId = id == "" ? json["id"]["videoId"].stringValue : id
+        
+        var date = json["snippet"]["publishedAt"].stringValue
+        self.published = date.getDate()
     
-    private func getImage(stringURL: String){
-        let url = NSURL(string: stringURL)
+        let thumbnailUrl = json["snippet"]["thumbnails"]["medium"]["url"].stringValue
+        let url = NSURL(string: thumbnailUrl)
         self.thumbnail = UIImage(data: NSData(contentsOfURL: url!)!)
     }
-    
-    var description: String{
-        return "\(seasonEpisode) : \(title)"
+}
+
+func chopTitle(longTitle: String) -> (String, String){
+    var toChop = longTitle
+    toChop.replaceRange(toChop.startIndex..<toChop.startIndex.advancedBy(12), with: "")
+    let titleArray = separate(toChop)
+    let titleString = titleArray[1]
+    let title = titleString[titleString.startIndex.advancedBy(1)..<titleString.endIndex]
+    let seasonEpisode = titleArray[0]
+    return (title, seasonEpisode)
+}
+
+//For screwy titles.
+func separate(longTitle: String) -> [String]{
+    let firstTry: [String] = longTitle.componentsSeparatedByString(":")
+    var titleArray: [String] = firstTry.count >= 2 ? firstTry : longTitle.componentsSeparatedByString("-")
+    if(titleArray.count < 2){
+        titleArray.append(" \(titleArray[0])")
+        titleArray[0] = " EXTRA"
     }
+    return titleArray
 }
