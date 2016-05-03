@@ -18,7 +18,6 @@
 		D688D2B51CC3F59B0066C336 /* RevanschViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2B41CC3F59B0066C336 /* RevanschViewController.swift */; };
 		D688D2B71CC3F71D0066C336 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2B61CC3F71D0066C336 /* Video.swift */; };
 		D688D2B91CC3F7360066C336 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2B81CC3F7360066C336 /* Playlist.swift */; };
-		D688D2BB1CC3FA690066C336 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2BA1CC3FA690066C336 /* JSONConverter.swift */; };
 		D688D2BE1CC562F50066C336 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D688D2BD1CC562F50066C336 /* LoadingView.xib */; };
 		D688D2C01CC5644E0066C336 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2BF1CC5644E0066C336 /* LoadingView.swift */; };
 		D688D2C21CC57B770066C336 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D688D2C11CC57B770066C336 /* EmptyModel.swift */; };
@@ -34,6 +33,7 @@
 		D6DD39D11CB9993600825255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6DD39CF1CB9993600825255 /* LaunchScreen.storyboard */; };
 		D6DD39DC1CB9993600825255 /* RevanschTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD39DB1CB9993600825255 /* RevanschTVTests.swift */; };
 		D6DD39E71CB9993600825255 /* RevanschTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD39E61CB9993600825255 /* RevanschTVUITests.swift */; };
+		D6F38F581CD14265005D32A3 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F38F571CD14265005D32A3 /* JSONConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		D688D2B41CC3F59B0066C336 /* RevanschViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevanschViewController.swift; sourceTree = "<group>"; };
 		D688D2B61CC3F71D0066C336 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D688D2B81CC3F7360066C336 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
-		D688D2BA1CC3FA690066C336 /* JSONConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
 		D688D2BD1CC562F50066C336 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		D688D2BF1CC5644E0066C336 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D688D2C11CC57B770066C336 /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		D6DD39E21CB9993600825255 /* RevanschTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevanschTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DD39E61CB9993600825255 /* RevanschTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevanschTVUITests.swift; sourceTree = "<group>"; };
 		D6DD39E81CB9993600825255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F38F571CD14265005D32A3 /* JSONConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
 		EF587A83937AD21A4A98B39F /* Pods-RevanschTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevanschTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevanschTV/Pods-RevanschTV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,7 +200,7 @@
 			children = (
 				D688D2C11CC57B770066C336 /* EmptyModel.swift */,
 				D6D4723A1CCC4D7C00BEFF35 /* Color.swift */,
-				D688D2BA1CC3FA690066C336 /* JSONConverter.swift */,
+				D6F38F571CD14265005D32A3 /* JSONConverter.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -452,7 +452,6 @@
 				D6D472391CCC341D00BEFF35 /* Reply.swift in Sources */,
 				D60632F81CC3AC2B00BDCD7D /* VideoCollectionViewCell.swift in Sources */,
 				D688D2C01CC5644E0066C336 /* LoadingView.swift in Sources */,
-				D688D2BB1CC3FA690066C336 /* JSONConverter.swift in Sources */,
 				D6D4723B1CCC4D7C00BEFF35 /* Color.swift in Sources */,
 				D688D2C21CC57B770066C336 /* EmptyModel.swift in Sources */,
 				D6DD39C41CB9993600825255 /* AppDelegate.swift in Sources */,
@@ -461,6 +460,7 @@
 				D688D2C41CC8285C0066C336 /* CommentsViewController.swift in Sources */,
 				D6CAF3951CCAD160007B17B0 /* Comment.swift in Sources */,
 				D60632F41CC3A2A600BDCD7D /* PlaylistCell.swift in Sources */,
+				D6F38F581CD14265005D32A3 /* JSONConverter.swift in Sources */,
 				D6CAF3911CCAD053007B17B0 /* CommentTableCell.swift in Sources */,
 				D688D2B91CC3F7360066C336 /* Playlist.swift in Sources */,
 				D688D2B71CC3F71D0066C336 /* Video.swift in Sources */,
